@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game of Thrones</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Game of Thrones</h1>
+  </header>
+
+  <!-- Story section -->
+  <div id="story-section">
+    <p id="story-text">The Story begins now...</p>
+  </div>
+
+  <!-- Choices section -->
+  <div id="choices-section"></div>
+
+  <!-- Image section -->
+  <div id="image-section">
+    <img id="story-image" src="images/start.jpg" alt="Game of Thrones">
+  </div>
+
+  <button id="reset-button">Restart Game</button>
+
+  <footer>
+    <p>Last updated: 
+      <span id="lastModified"></span>
+    </p>
+
+    <div id="addendum">
+      <h3>Addendum</h3>
+      <p>
+        In this project, I created an interactive "Game of Thrones" story game that prompts users with different choices and shows images based on their selections. My primary goal was to build a simple yet engaging experience where users can make decisions that affect the story's progression.
+      </p>
+
+      <p>
+        For the creative process, I focused on using visual elements (images) to reinforce the storytelling aspect. For example, I utilized images of different Game of Thrones scenes to accompany the choices the user makes, making the experience more immersive. 
+      </p>
+
+      <p>
+        One of the challenges I faced was ensuring that the images loaded dynamically based on the user's choices. Initially, I had to figure out how to manipulate the DOM (Document Object Model) and dynamically update the story text and images without reloading the page. This required handling JavaScript events to update the content based on user input. I overcame this challenge by using JavaScript to handle click events and display the appropriate story continuation and image.
+      </p>
+
+      <p>
+        Another challenge was ensuring that the game reset properly when the user clicked the "Restart Game" button. I had to ensure that the story text, images, and choices all reset to their initial states. This was done by resetting the content of the relevant DOM elements when the reset button was clicked.
+      </p>
+
+      <p>
+        Throughout this process, I learned a lot about DOM manipulation and how to create a responsive, interactive web experience. The main insight I gained was the importance of keeping the user experience seamless by ensuring that all the content updates dynamically based on their interactions.
+      </p>
+    </div>
+  </footer>
+
+  <script type="text/javascript">
+    // Display last modified date
+    var x = document.lastModified;
+    document.getElementById('lastModified').textContent = x;
+  </script>
+</body>
+</html>
